@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/m/v2/hello_world/mascot"
+	"example.com/m/v2/01_hello_world/mascot"
 )
 
 const (
