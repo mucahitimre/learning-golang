@@ -1,8 +1,9 @@
 package main
 
-import "example.com/m/v2/02_array_slices/examplepackage"
+import "example.com/m/v2/02_array_slices_map/examplepackage"
 
 func main() {
 	examplepackage.ExampleArray()
 	examplepackage.ExampleSlice()
+	examplepackage.ExampleMap()
 }
