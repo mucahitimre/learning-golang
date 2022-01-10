@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -41,6 +42,24 @@ func main() {
 		}
 
 		fmt.Printf(printed, index, item)
+	}
+
+	c := time.After(5 * time.Second)
+
+	for {
+		b := false
+
+		select {
+		case <-c:
+			b = true
+		default:
+			fmt.Println(time.Now())
+			time.Sleep(1 * time.Second)
+		}
+
+		if b {
+			break
+		}
 	}
 }
 
