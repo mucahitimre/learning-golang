@@ -14,7 +14,7 @@ func main() {
 	age := member.GetAge()
 	fmt.Printf("Age: %d \n", age)
 
-	// pointer olan methodlar interface'e tanımlanamıyor
+	// pointer olan methodlar interface'e tanımlanamaz
 	stMember := GetStructMember()
 	address := stMember.GetOrAddAddress("USA")
 	fmt.Printf("Address: %s \n", address)
