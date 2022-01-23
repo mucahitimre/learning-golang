@@ -12,3 +12,11 @@ require (
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
 )
+
+// My external module or downloaded module folder definition..
+// replace(
+// 	github.com/gofiber/fiber/v2 => ../mypcfiberfolder/fiber/v2
+// )
+
+// update web module commands
+// go get -u github.com/gofiber/fiber/v2
