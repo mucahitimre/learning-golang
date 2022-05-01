@@ -204,22 +204,6 @@ func main() {
 		doc.WriteString(dialog + "\n\n")
 	}
 
-	// Color grid
-	colors := func() string {
-		colors := colorGrid(14, 8)
-
-		b := strings.Builder{}
-		for _, x := range colors {
-			for _, y := range x {
-				s := lipgloss.NewStyle().SetString("  ").Background(lipgloss.Color(y))
-				b.WriteString(s.String())
-			}
-			b.WriteRune('\n')
-		}
-
-		return b.String()
-	}()
-
 	lists := lipgloss.JoinHorizontal(lipgloss.Top,
 		list.Render(
 			lipgloss.JoinVertical(lipgloss.Left,
@@ -243,7 +227,7 @@ func main() {
 		),
 	)
 
-	doc.WriteString(lipgloss.JoinHorizontal(lipgloss.Top, lists, colors))
+	doc.WriteString(lipgloss.JoinHorizontal(lipgloss.Top, lists))
 
 	// Okay, let's print it
 	fmt.Println(docStyle.Render(doc.String()))
