@@ -1,9 +1,8 @@
 package main
 
 import (
+	"Learngo/01_hello_world/mascot"
 	"fmt"
-
-	"example.com/m/v2/01_hello_world/mascot"
 )
 
 const (
